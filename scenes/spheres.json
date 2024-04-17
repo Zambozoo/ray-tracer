@@ -1,0 +1,162 @@
+{
+    "AspectRatio": 1.33333333333333,
+    "ImageWidth": 200,
+    "AntiAliasCount": 36,
+    "NumWorkers": 100,
+    "MaxDepth": 15,
+    "Camera": {
+        "CameraLookFrom": {
+            "X": 2,
+            "Y": 0,
+            "Z": 20
+        },
+        "CameraLookAt": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "CameraUp": {
+            "X": 1,
+            "Y": 0,
+            "Z": 0
+        },
+        "ViewPlaneWidth": 20
+    },
+    "Scene": {
+        "Background": {
+            "R": 0,
+            "G": 255,
+            "B": 255
+        },
+        "Lights": [
+            {
+                "Type": "sphere",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Position":{
+                    "X": 0,
+                    "Y": 0,
+                    "Z": 0
+                },
+                "Radius":0.5
+            }
+        ],
+        "Materials": {
+            "matteGreen": {
+                "Type": "lambertian",
+                "Color": {
+                    "G": 255
+                }
+            },
+            "matteRed": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 255
+                }
+            },
+            "metallicYellow": {
+                "Type": "metal",
+                "Color": {
+                    "R": 224,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "metallicYellowFuzzy": {
+                "Fuzz": 0.75,
+                "Type": "metal",
+                "Color": {
+                    "R": 224,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClear": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClearFuzzy": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "Fuzz": 0.75,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            }
+        },
+        "Objects": [
+            {
+                "Material": "matteGreen",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 50.05,
+                    "Position": {
+                        "X": -50,
+                        "Y": 1,
+                        "Z": -1
+                    }
+                }
+            },
+            {
+                "Material": "transClear",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 1,
+                    "Position": {
+                        "X": 0.5,
+                        "Y": 2,
+                        "Z": -5
+                    }
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 1,
+                    "Position": {
+                        "X": 0.5,
+                        "Y": -2,
+                        "Z": -5
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellow",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 1,
+                    "Position": {
+                        "X": 0.5,
+                        "Y": 2,
+                        "Z": 5
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 1,
+                    "Position": {
+                        "X": 0.5,
+                        "Y": -2,
+                        "Z": 5
+                    }
+                }
+            }
+        ]
+    }
+}

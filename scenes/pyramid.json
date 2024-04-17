@@ -1,0 +1,347 @@
+{
+    "AspectRatio": 1.33333333333333,
+    "ImageWidth": 1000,
+    "AntiAliasCount": 36,
+    "NumWorkers": 100,
+    "MaxDepth": 15,
+    "Camera": {
+        "CameraLookFrom": {
+            "X": 2,
+            "Y": 0,
+            "Z": 20
+        },
+        "CameraLookAt": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "CameraUp": {
+            "X": 1,
+            "Y": 0,
+            "Z": 0
+        },
+        "ViewPlaneWidth": 20
+    },
+    "Scene": {
+        "Background": {
+            "R": 0,
+            "G": 255,
+            "B": 255
+        },
+        "Lights": [
+            {
+                "Type": "sphere",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Position":{
+                    "X": 3,
+                    "Y": 0,
+                    "Z": 0
+                },
+                "Radius":0.5
+            },
+            {
+                "Type": "directional",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Direction":{
+                    "X": -1,
+                    "Y": -1,
+                    "Z": 0
+                }
+            }
+        ],
+        "Materials": {
+            "matteGreen": {
+                "Type": "lambertian",
+                "Color": {
+                    "G": 255
+                }
+            },
+            "matteRed": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 255
+                }
+            },
+            "matteYellow": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 100,
+                    "G": 100,
+                    "B": 0
+                }
+            },
+            "metallicYellowFuzzy": {
+                "Fuzz": 0.75,
+                "Type": "metal",
+                "Color": {
+                    "R": 216,
+                    "G": 183,
+                    "B": 12
+                }
+            },
+            "transClear": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClearFuzzy": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "Fuzz": 0.75,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            }
+        },
+        "Objects": [
+            {
+                "Material": "matteYellow",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 50.05,
+                    "Position": {
+                        "X": -50.25,
+                        "Y": 0,
+                        "Z": 0
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": -0.5,
+                        "Y": -4,
+                        "Z": -4
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 8,
+                        "Z": 8
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": -3,
+                        "Z": -3
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 6,
+                        "Z": 6
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0.5,
+                        "Y": -2,
+                        "Z": -2
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 4,
+                        "Z": 4
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1,
+                        "Y": -1,
+                        "Z": -1
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 2,
+                        "Z": 2
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1,
+                        "Y": -1,
+                        "Z": -1
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 2,
+                        "Z": 2
+                    }
+                }
+            },
+            {
+                "Material": "metallicYellowFuzzy",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.5,
+                        "Y": -0.5,
+                        "Z": -0.5
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 1,
+                        "Z": 1
+                    }
+                }
+            },
+            {
+                "Material": "matteRed",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": -3.75,
+                        "Z": -3.75
+                    },
+                    "Dimensions": {
+                        "X": 1.5,
+                        "Y": 0.5,
+                        "Z": 0.5
+                    }
+                }
+            },
+            {
+                "Material": "matteRed",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": -3.75,
+                        "Z": 3.25
+                    },
+                    "Dimensions": {
+                        "X": 1.5,
+                        "Y": 0.5,
+                        "Z": 0.5
+                    }
+                }
+            },
+            {
+                "Material": "matteRed",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": 3.25,
+                        "Z": -3.75
+                    },
+                    "Dimensions": {
+                        "X": 1.5,
+                        "Y": 0.5,
+                        "Z": 0.5
+                    }
+                }
+            },
+            {
+                "Material": "matteRed",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": 3.25,
+                        "Z": 3.25
+                    },
+                    "Dimensions": {
+                        "X": 1.5,
+                        "Y": 0.5,
+                        "Z": 0.5
+                    }
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.75,
+                        "Y": 3.5,
+                        "Z": 3.5
+                    },
+                    "Radius":0.3
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.75,
+                        "Y": -3.5,
+                        "Z": 3.5
+                    },
+                    "Radius":0.3
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.75,
+                        "Y": 3.5,
+                        "Z": -3.5
+                    },
+                    "Radius":0.3
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.75,
+                        "Y": -3.5,
+                        "Z": -3.5
+                    },
+                    "Radius":0.3
+                }
+            },
+            {
+                "Material": "transClear",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 2.3,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "Radius":0.3
+                }
+            }
+        ]
+    }
+}

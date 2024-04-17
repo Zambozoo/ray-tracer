@@ -1,0 +1,424 @@
+{
+    "AspectRatio": 1.33333333333333,
+    "ImageWidth": 1000,
+    "AntiAliasCount": 25,
+    "NumWorkers": 100,
+    "MaxDepth": 10,
+    "Camera": {
+        "CameraLookFrom": {
+            "X": 2,
+            "Y": 0,
+            "Z": 20
+        },
+        "CameraLookAt": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "CameraUp": {
+            "X": 1,
+            "Y": 0,
+            "Z": 0
+        },
+        "ViewPlaneWidth": 20
+    },
+    "Scene": {
+        "Background": {
+            "R": 0,
+            "G": 255,
+            "B": 255
+        },
+        "Lights": [
+            {
+                "Type": "sphere",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Position":{
+                    "X": 3,
+                    "Y": 0,
+                    "Z": 0
+                },
+                "Radius":0.5
+            },
+            {
+                "Type": "directional",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Direction":{
+                    "X": -1,
+                    "Y": -1,
+                    "Z": 0
+                }
+            }
+        ],
+        "Materials": {
+            "matteGreen": {
+                "Type": "lambertian",
+                "Color": {
+                    "G": 255
+                }
+            },
+            "matteGrey": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 100,
+                    "G": 100,
+                    "B": 100
+                }
+            },
+            "mattePink": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 255,
+                    "B": 255
+                }
+            },
+            "matteBlack": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 0,
+                    "G": 0,
+                    "B": 0
+                }
+            },
+            "metallicYellowFuzzy": {
+                "Fuzz": 0.75,
+                "Type": "metal",
+                "Color": {
+                    "R": 216,
+                    "G": 183,
+                    "B": 12
+                }
+            },
+            "metallicWhite": {
+                "Type": "metal",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClear": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClearFuzzy": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "Fuzz": 0.75,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            }
+        },
+        "Objects": [
+            {
+                "Material": "matteGreen",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 50.05,
+                    "Position": {
+                        "X": -50.1,
+                        "Y": 0,
+                        "Z": 0
+                    }
+                }
+            },
+            {
+                "Material": "mattePink",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": -0.75,
+                        "Z": -0.75
+                    },
+                    "Dimensions": {
+                        "X": 1.5,
+                        "Y": 1.5,
+                        "Z": 1.5
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0.85,
+                        "Y": -0.15,
+                        "Z": 0.85
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 0.3
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.95,
+                        "Y": -0.15,
+                        "Z": 0.6
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 0.3
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.875,
+                        "Y": -0.75,
+                        "Z": -0.375
+                    },
+                    "Dimensions": {
+                        "X": 0.25,
+                        "Y": 1.5,
+                        "Z": 0.25
+                    }
+                }
+            },
+            {
+                "Material": "mattePink",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.5,
+                        "Y": -0.5,
+                        "Z": -0.5
+                    },
+                    "Dimensions": {
+                        "X": 1,
+                        "Y": 1,
+                        "Z": 1
+                    }
+                }
+            },
+            {
+                "Material": "mattePink",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 2.5,
+                        "Y": -0.25,
+                        "Z": -0.25
+                    },
+                    "Dimensions": {
+                        "X": 0.5,
+                        "Y": 0.5,
+                        "Z": 0.5
+                    }
+                }
+            },
+            {
+                "Material": "metallicWhite",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": -2.75,
+                        "Z": -0.75
+                    },
+                    "Radius":1.5
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.875,
+                        "Y": -3.75,
+                        "Z": -0.375
+                    },
+                    "Dimensions": {
+                        "X": 0.25,
+                        "Y": 2.5,
+                        "Z": 0.25
+                    }
+                }
+            },
+            {
+                "Material": "metallicWhite",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.5,
+                        "Y": -2.5,
+                        "Z": -0.5
+                    },
+                    "Radius":1
+                }
+            },
+            {
+                "Material": "metallicWhite",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 2.5,
+                        "Y": -2.25,
+                        "Z": -0.25
+                    },
+                    "Radius":0.5
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.875,
+                        "Y": 1.25,
+                        "Z": -0.375
+                    },
+                    "Dimensions": {
+                        "X": 0.25,
+                        "Y": 2.5,
+                        "Z": 0.25
+                    }
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 0,
+                        "Y": 2.75,
+                        "Z": 0.75
+                    },
+                    "Radius":1.5
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.5,
+                        "Y": 2.5,
+                        "Z": 0.5
+                    },
+                    "Radius":1
+                }
+            },
+            {
+                "Material": "transClearFuzzy",
+                "Type": "sphere",
+                "Hittable": {
+                    "Position": {
+                        "X": 2.5,
+                        "Y": 2.25,
+                        "Z": 0.25
+                    },
+                    "Radius":0.5
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0.85,
+                        "Y": 2.15,
+                        "Z": 0.85
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 0.3
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.45,
+                        "Y": -2.35,
+                        "Z": 0.6
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 0.3
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 1.45,
+                        "Y": 2.35,
+                        "Z": 1.4
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 1
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0.45,
+                        "Y": -2.5,
+                        "Z": 1
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 1
+                    }
+                }
+            },
+            {
+                "Material": "matteBlack",
+                "Type": "prism",
+                "Hittable": {
+                    "Position": {
+                        "X": 0.45,
+                        "Y": 2.35,
+                        "Z": 2
+                    },
+                    "Dimensions": {
+                        "X": 0.3,
+                        "Y": 0.3,
+                        "Z": 1
+                    }
+                }
+            }
+        ]
+    }
+}

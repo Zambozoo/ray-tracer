@@ -1,0 +1,402 @@
+{
+    "AspectRatio": 1.33333333333333,
+    "ImageWidth": 100,
+    "AntiAliasCount": 16,
+    "NumWorkers": 100,
+    "MaxDepth": 25,
+    "Camera": {
+        "CameraLookFrom": {
+            "X": 2,
+            "Y": 0,
+            "Z": 20
+        },
+        "CameraLookAt": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        },
+        "CameraUp": {
+            "X": 1,
+            "Y": 0,
+            "Z": 0
+        },
+        "ViewPlaneWidth": 20
+    },
+    "Scene": {
+        "Background": {
+            "R": 0,
+            "G": 255,
+            "B": 255
+        },
+        "Lights": [
+            {
+                "Type": "directional",
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                },
+                "Direction": {
+                    "X": -3,
+                    "Y": -10
+                }
+            },
+            {
+                "Type": "ambient",
+                "Color": {
+                    "R": 10,
+                    "G": 10,
+                    "B": 10
+                }
+            }
+        ],
+        "Materials": {
+            "matteGreen": {
+                "Type": "lambertian",
+                "Color": {
+                    "G": 255
+                }
+            },
+            "matteRed": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 255
+                }
+            },
+            "matteYellow": {
+                "Type": "lambertian",
+                "Color": {
+                    "R": 224,
+                    "G": 255,
+                    "B": 255
+                }
+            },
+            "transClear": {
+                "Type": "dielectric",
+                "RefractionIndex": 1.52,
+                "SchlickScale": 1,
+                "Color": {
+                    "R": 255,
+                    "G": 255,
+                    "B": 255
+                }
+            }
+        },
+        "Objects": [
+            {
+                "Material": "transClear",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 1.5,
+                    "Position": {
+                        "X": 1.5,
+                        "Y": -2.5,
+                        "Z": 1.5
+                    }
+                }
+            },
+            {
+                "Material": "matteGreen",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 50.05,
+                    "Position": {
+                        "X": -50,
+                        "Y": 1,
+                        "Z": -1
+                    }
+                }
+            },
+            {
+                "Comment": "House Front1",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 0,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": 0,
+                            "Z": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Front2",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 0,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": 2,
+                            "Z": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Left1",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 2,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": -1,
+                            "Z": -2
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Left2",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 0,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 0,
+                            "Y": -1,
+                            "Z": -2
+                        },
+                        {
+                            "X": 2,
+                            "Y": -1,
+                            "Z": -2
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Left1",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 2,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 0,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": 1,
+                            "Z": -2
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Right2",
+                "Material": "matteYellow",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 0,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 0,
+                            "Y": 1,
+                            "Z": -2
+                        },
+                        {
+                            "X": 2,
+                            "Y": 1,
+                            "Z": -2
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Roof1",
+                "Material": "matteRed",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 2,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 2,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 3,
+                            "Y": 1,
+                            "Z": -1
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Roof2",
+                "Material": "matteRed",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 2,
+                            "Y": -1,
+                            "Z": -2
+                        },
+                        {
+                            "X": 2,
+                            "Y": 0,
+                            "Z": 0
+                        },
+                        {
+                            "X": 3,
+                            "Y": 1,
+                            "Z": -1
+                        }
+                    ]
+                }
+            },
+            {
+                "Comment": "House Roof3",
+                "Material": "matteRed",
+                "Type": "triangle",
+                "Hittable": {
+                    "Points": [
+                        {
+                            "X": 2,
+                            "Y": 1,
+                            "Z": -2
+                        },
+                        {
+                            "X": 2,
+                            "Y": 2,
+                            "Z": 0
+                        },
+                        {
+                            "X": 3,
+                            "Y": 1,
+                            "Z": -1
+                        }
+                    ]
+                }
+            }
+        ],
+        "SomethingElse": [
+            {
+                "Material": "reflectiveBlue",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 2,
+                    "Position": {
+                        "X": 5,
+                        "Y": -4,
+                        "Z": 0
+                    }
+                }
+            },
+            {
+                "Material": "matteRed",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 2,
+                    "Position": {
+                        "X": 5,
+                        "Y": 0,
+                        "Z": 3
+                    }
+                }
+            },
+            {
+                "Material": "reflectiveGrey",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 2,
+                    "Position": {
+                        "X": 5,
+                        "Y": 4,
+                        "Z": 0
+                    }
+                }
+            },
+            {
+                "Material": "diffuse",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 100,
+                    "Position": {
+                        "X": 20,
+                        "Y": 0,
+                        "Z": -100.5
+                    }
+                }
+            },
+            {
+                "Material": "mattePurple",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 2,
+                    "Position": {
+                        "X": 10,
+                        "Y": 6,
+                        "Z": 2
+                    }
+                }
+            },
+            {
+                "Material": "matteYellow",
+                "Type": "sphere",
+                "Hittable": {
+                    "Radius": 2,
+                    "Position": {
+                        "X": -4,
+                        "Y": 0,
+                        "Z": 1
+                    }
+                }
+            }
+        ]
+    }
+}
